@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "QR Code",
+  "version": "1.0.0",
+  "description": "a page link qrcode generator",
+  "icons": {
+    "16": "img/qrcode_16.png",
+    "48": "img/qrcode_48.png",
+    "128": "img/qrcode_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/qrcode_19.png",
+      "38": "img/qrcode_38.png"
+    },
+    "default_title": "QR Code",
+    "default_popup": "popup.html"
+  },
+  "author": "BK Heleth",
+  "content_scripts": [
+    {
+      "include_globs": [
+        "*"
+      ],
+      "js": [
+        "public/app.bundle.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "tabs"
+  ],
+  "minimum_chrome_version": "26"
+}

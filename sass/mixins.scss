@@ -1,0 +1,20 @@
+$color-clouds: rgb(236, 240, 241);
+$color-silver: rgb(189, 195, 199);
+$color-wet-asphalt: rgb(52, 73, 94);
+$color-midnight-blue: rgb(44, 62, 80);
+
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-auto-length {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}

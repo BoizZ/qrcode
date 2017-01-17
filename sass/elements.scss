@@ -1,0 +1,31 @@
+.wrapper {
+    margin: 0;
+    padding: 5px;
+    .qrcode {
+        margin-bottom: 5px;
+    }
+    .form {
+        @include flex;
+        input, button {
+            border-radius: 2px;
+            outline: 0;
+        }
+        input {
+            height: 35px;
+            @include flex-auto-length;
+            border: 1px solid $color-silver;
+            color: $color-wet-asphalt;
+            padding: 0 10px;
+        }
+        button {
+            margin-left: 5px;
+            border: 1px solid $color-silver;
+            background: $color-clouds;
+            color: $color-midnight-blue;
+            box-shadow: .3px .3px 1px $color-silver;
+            &:active {
+                background: $color-silver;
+            }
+        }
+    }
+}
